@@ -1,0 +1,16 @@
+{
+    "name": "mengduo-shop",
+    "version": "1.0.0",
+    "description": "蒙多商行 · 游戏账号租赁平台",
+    "main": "server/app.js",
+    "scripts": {
+        "start": "node server/app.js",
+        "dev": "node server/app.js"
+    },
+    "dependencies": {
+        "express": "4.18.2"
+    },
+    "engines": {
+        "node": ">=14"
+    }
+}

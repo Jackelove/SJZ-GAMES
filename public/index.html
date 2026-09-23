@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#1e3a8a">
+  <title>蒙多商行 · 游戏账号租赁平台</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-in">
+      <div class="top-left">欢迎来到 <span>蒙多商行平台</span>！</div>
+      <div class="top-right">
+        <a data-act="go" data-page="user" data-tab="rent">我的订单</a>
+        <a data-act="go" data-page="user">我的钱包</a>
+        <a data-act="contact">联系客服</a>
+        <span class="divider"></span>
+        <div class="mode-toggle" data-act="toggle-mode"><span>🌙</span><span>夜间</span></div>
+        <span class="divider"></span>
+        <span>183****2142</span>
+        <a data-act="go" data-page="user">用户</a>
+        <a class="logout" data-act="logout">退出</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="header-in">
+      <div class="logo" data-act="go" data-page="home">
+        <div class="logo-icon">蒙</div>
+        蒙多商行
+      </div>
+      <div class="header-actions">
+        <button class="btn-header dark" data-act="go" data-page="publish">发布出租</button>
+        <button class="btn-header gold" data-act="contact">收售AWM</button>
+        <button class="btn-header outline" data-act="contact">客服</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-tabs-wrap" id="navTabsWrap"></div>
+
+  <div id="app"></div>
+
+  <div class="fixed-rail" id="fixedRail"></div>
+
+  <div id="toast"></div>
+  <div id="modal"></div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
