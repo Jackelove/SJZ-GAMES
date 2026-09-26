@@ -1,17 +1,19 @@
 <script lang="ts">
 import { ref } from 'vue';
 
-export interface ToastItem {
+export type ToastType = 'ok' | 'warn' | 'err';
+
+interface ToastItem {
   id: number;
   msg: string;
-  type: 'ok' | 'warn' | 'err';
+  type: ToastType;
 }
 
 const toasts = ref<ToastItem[]>([]);
-let seq = 0;
+let seed = 0;
 
-export function toast(msg: string, type: ToastItem['type'] = 'ok') {
-  const id = ++seq;
+export function toast(msg: string, type: ToastType = 'ok') {
+  const id = ++seed;
   toasts.value.push({ id, msg, type });
   setTimeout(() => {
     toasts.value = toasts.value.filter(t => t.id !== id);
@@ -27,11 +29,14 @@ export default {
 </script>
 
 <template>
-  <div id="toast">
+  <div class="toast-host">
     <div
       v-for="t in toasts"
       :key="t.id"
-      :class="['toast', t.type === 'ok' ? '' : t.type]"
-    >{{ t.msg }}</div>
+      class="toast"
+      :class="t.type"
+    >
+      {{ t.msg }}
+    </div>
   </div>
 </template>
